@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection Google Translate</title>
+  <script>
+    // Détection de l'appareil
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/iPad|iPhone|iPod/.test(userAgent)) {
+      // iOS → App Store
+      window.location.href = "https://apps.apple.com/app/id414706506";
+    } else if (/android/i.test(userAgent)) {
+      // Android → Play Store
+      window.location.href = "https://play.google.com/store/apps/details?id=com.google.android.apps.translate";
+    } else {
+      // Autres appareils → site web
+      window.location.href = "https://translate.google.com/";
+    }
+  </script>
+</head>
+<body>
+  <p>Redirection en cours...</p>
+</body>
+</html>
